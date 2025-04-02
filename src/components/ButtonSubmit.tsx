@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 interface ButtonProps {
-  to: string;
   text: string
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
@@ -10,12 +9,10 @@ interface ButtonProps {
 }
 
 
-function Button({ to, text, className, type,onClick}: ButtonProps) {
+function Button({text, className, type,onClick}: ButtonProps) {
   return (
     <>
-        <Link to={to}>
-        <button type={type} className={className} onClick={onClick}>{text}</button>
-        </Link>
+     <button type={type} className={className} onClick={onClick}>{text}</button>     
     </>
   );
 };
