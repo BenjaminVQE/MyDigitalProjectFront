@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Connexion from "./pages/connexion"; // Importe ta page Connexion
+import Connexion from "./pages/connexion";
 import Button from "./components/Button";
 import './App.css'
 
