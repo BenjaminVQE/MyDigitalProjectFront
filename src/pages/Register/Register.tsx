@@ -12,6 +12,7 @@ import {
 import Header from "../../components/Header";
 import Slider from "../../components/Slider";
 import { useEffect } from "react";
+import "./Register.css";
 
 function Inscription() {
   const [email, setEmail] = useState("");
@@ -44,11 +45,10 @@ function Inscription() {
   return (
     <>  
       <Header />
-      <Slider currentStep={0} />
-      <Container maxWidth="sm" sx={{ marginTop: 8 }}>
+      <Container maxWidth="sm" >
         <Box
           sx={{
-            marginTop: 8,
+            marginTop: 0,
             padding: 4,
             display: "flex",
             flexDirection: "column",
@@ -61,7 +61,6 @@ function Inscription() {
           <Typography component="h1" variant="h5" mb={2}>
             Inscription
           </Typography>
-
           <Box
             component="form"
             onSubmit={handleSubmit}

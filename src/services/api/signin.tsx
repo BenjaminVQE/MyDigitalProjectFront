@@ -1,7 +1,7 @@
 // src/api/auth.ts
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_BASE_URLAPI + '/users'; 
+const API_URL = "http://localhost:8080/api/users"; 
 
 export const registerUser = async (email: string,password: string, lastName: string,firstName: string, company: string, phoneNumber: string) => {
   try {
