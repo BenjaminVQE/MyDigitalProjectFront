@@ -1,0 +1,11 @@
+:root {
+    --light-bg-color: #f9f4ea;
+}
+
+#root {
+    height: 100vh;
+    background-color: var(--light-bg-color);
+    font-family: Poppins, sans-serif;
+}
+
+

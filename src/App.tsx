@@ -1,15 +1,12 @@
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Connexion from "./pages/connexion";
-import Inscription from "./pages/inscription";
-import Button from "./components/Button";
-import Home from "./pages/home";
-import './App.css'
+import Connexion from "./pages/Connexion/connexion";
+import Inscription from "./pages/Register/Register";
+import Home from "./pages/Home/Home";
+import "./App.css";
 
 
 
 function App() {
-
   return (
     <>
       <Routes>
@@ -17,13 +14,8 @@ function App() {
         <Route path="/inscription" element={<Inscription />} />
         <Route path="/" element={<Home />} />
       </Routes>
-    
-      
-      
-  
-      
     </>
-  )
+  );
 }
 
-export default App
+export default App;
