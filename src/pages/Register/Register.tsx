@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import Header from "../../components/Header";
 import Slider from "../../components/Slider";
-
+import { useEffect } from "react";
 
 function Inscription() {
   const [email, setEmail] = useState("");
@@ -38,12 +38,14 @@ function Inscription() {
       console.error("Erreur lors de la connexion :", err);
     }
   };
+  useEffect(() => {
+      document.title = "Inscription/Tissup"; 
+    }, []);
   return (
     <>  
       <Header />
-      <Slider />
+      <Slider currentStep={0} />
       <Container maxWidth="sm" sx={{ marginTop: 8 }}>
-        
         <Box
           sx={{
             marginTop: 8,

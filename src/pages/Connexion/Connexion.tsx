@@ -4,6 +4,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../services/api/auth";
 import Header from "../../components/Header";
+import { useEffect } from "react";
+
 function Connexion() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,6 +21,9 @@ function Connexion() {
       console.error("Erreur lors de la connexion :", err);
     }
   };
+  useEffect(() => {
+    document.title = "Connexion/Tissup"; 
+  }, []);
   return (
     <>
       <Header />
