@@ -11,7 +11,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["node", "react", "react-dom"]
   },
   "include": ["src"]
 }
