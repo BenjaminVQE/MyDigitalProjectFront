@@ -1,5 +1,16 @@
 import Box from '@mui/material/Box';
-export default function Slider() {  
+import { useState} from "react";
+
+interface SliderProps {
+    currentStep: number;
+  }
+const steps = [
+    "Design mockup",
+    "Informations",
+    "Entreprise",
+    "Confirmation"
+];
+export default function Slider({ currentStep }: SliderProps) {  
     return (
     <>
     <Box
@@ -13,7 +24,7 @@ export default function Slider() {
 
     }}
     >
-        {["Design mockup", "Informations", "Entreprise", "Confirmation"].map((item) => (
+        {steps.map((item, index) => (
         <Box
             key={item}
             sx={{
@@ -26,9 +37,8 @@ export default function Slider() {
                 justifyContent: 'center',
                 alignItems: ' center',
                 fontSize: '2rem',
-                bgcolor: 'var(--light-bg-color)',
+                bgcolor: index === currentStep ? "lightgreen":"var(--light-bg-color)",
                 fontSizeAdjust: '0.3',
-                
             }}
         >
             {item}
