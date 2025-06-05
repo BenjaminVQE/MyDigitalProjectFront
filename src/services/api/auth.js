@@ -1,11 +1,11 @@
 import axios from 'axios';
 
+const apiUrl = import.meta.env.VITE_API_URL
 
-const API_URL = "https://benjamin-vaique.fr:8080/auth";
 
 export const loginUser = async (email, password) => {
   try {
-    const response = await axios.post(API_URL, { email, password });
+    const response = await axios.post(`${apiUrl}/auth`, { email, password });
     return response.data; 
   } catch (error) {
     if (axios.isAxiosError(error)) {

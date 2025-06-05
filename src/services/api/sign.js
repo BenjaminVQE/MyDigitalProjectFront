@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const API_URL = "https://benjamin-vaique.fr:8080/users"; 
+const apiUrl = import.meta.env.VITE_API_URL || API_URL; 
 
 export const registerUser = async (email,password, lastName,firstName, company, phoneNumber) => {
   try {
     const response = await axios.post(
-        API_URL, 
+        `${apiUrl}/users`, 
         { email, password, lastName, firstName, company, phoneNumber },
     );
     return response.data; 
