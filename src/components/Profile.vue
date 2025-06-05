@@ -19,24 +19,45 @@
       <v-card-title class="justify-center">   
       </v-card-title>
       <v-card-text>
-        <v-list dense>
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-account</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title>{{ profiles.firstName }}</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item>
-            <v-list-item-icon>
-              <v-icon>mdi-email</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
+     <v-list dense>
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-account</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>{{ profiles.firstName }} {{ profiles.lastName }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-domain</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>{{ profiles.company }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-email</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>{{ profiles.email }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-list-item>
+        <v-list-item-icon>
+          <v-icon>mdi-phone</v-icon>
+        </v-list-item-icon>
+        <v-list-item-content>
+          <v-list-item-title>{{ profiles.phoneNumber }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </v-list>
+
+
       </v-card-text>
       <v-card-actions>
         <v-btn color="primary" @click="editProfile">Modifier profil</v-btn>
