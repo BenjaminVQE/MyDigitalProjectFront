@@ -7,12 +7,13 @@ const baseItems = [
   { title: 'Accueil', icon: 'mdi-home', to: '/' },
   { title: 'Connexion', icon: 'mdi-account', to: '/login' },
   { title: 'Inscription', icon: 'mdi-account-plus', to: '/register'},
+  { title: 'Mon Compte', icon: 'mdi-account-circle', to: '/profile' },
   { title: 'Déconnexion', icon: 'mdi-logout', to: '/logout' },
 ]
 
 const items = computed(() => {
   if(token) {
-    return [baseItems[0], baseItems[3]]
+    return [baseItems[0], baseItems[3], baseItems[4]]
   } else {
     // Sinon, Accueil + Connexion
     return [baseItems[0], baseItems[1], baseItems[2]]
@@ -32,7 +33,7 @@ const items = computed(() => {
         <!-- Le menu déroulant activé par l'icône -->
         <v-menu>
           <template #activator="{ props }">
-            <v-btn icon v-bind="props">
+            <v-btn icon v-bind="props" aria-label="menu utilisateur">
               <v-icon>mdi-account</v-icon>
             </v-btn>
           </template>

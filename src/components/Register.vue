@@ -142,7 +142,7 @@
                 block
                 type="submit"
             >
-                S'Inscrivez-vous
+                S'inscrire
             </v-btn>
         </v-form>
         <v-card-text class="text-center">
